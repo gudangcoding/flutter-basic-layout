@@ -1,18 +1,6 @@
 import 'package:flutter/material.dart';
-import 'HalDua.dart';
-void main() {
-  runApp(new MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: HelloWorld(),
-    title: "Kursus Flutter",
-    routes: <String, WidgetBuilder>{
-      '/HelloWorld' : (BuildContext context) => new HelloWorld(),
-      '/HalDua' : (BuildContext context) => new HalDua(),
-    },
-  ));
-}
 
-class HelloWorld extends StatelessWidget {
+class HalDua extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -32,9 +20,9 @@ class HelloWorld extends StatelessWidget {
 
             child: new Center(
               child:new IconButton(
-                icon: new Icon(Icons.headset, size: 40,),
-                onPressed: (){
-                  Navigator.pushNamed(context, '/HalDua');
+                icon: new Icon(Icons.speaker, size: 40,),
+                onPressed:  (){
+                  Navigator.pushNamed(context, '/HelloWorld');
                 },
               )
             )
